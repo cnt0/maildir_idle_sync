@@ -1,0 +1,12 @@
+github.com/BurntSushi/toml v0.3.1 h1:WXkYYl6Yr3qBf1K79EBnL4mak0OimBfB0XUf9Vl28OQ=
+github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
+github.com/emersion/go-imap v1.0.0-beta.1 h1:bTCaVlUnb5mKoW9lEukusxguSYYZPer+q0g5t+vw5X0=
+github.com/emersion/go-imap v1.0.0-beta.1/go.mod h1:oydmHwiyv92ZOiNfQY9BDax5heePWN8P2+W1B2T6qjc=
+github.com/emersion/go-imap-enable v0.0.0-20171113210557-34871b6fe7d2 h1:BStx8zdcYbH5f8OyfgJ40GZAwabb4I8ghKiRI/RHHxM=
+github.com/emersion/go-imap-enable v0.0.0-20171113210557-34871b6fe7d2/go.mod h1:XAkBW6EJ5MFuwRr09ZEVX9r6tMt9ztyqPWsH5KVBWcU=
+github.com/emersion/go-imap-idle v0.0.0-20180114101550-2af93776db6b h1:q4qkNe/W10qFGD3RWd4meQTkD0+Zrz0L4ekMvlptg60=
+github.com/emersion/go-imap-idle v0.0.0-20180114101550-2af93776db6b/go.mod h1:o14zPKCmEH5WC1vU5SdPoZGgNvQx7zzKSnxPQlobo78=
+github.com/emersion/go-sasl v0.0.0-20161116183048-7e096a0a6197 h1:rDJPbyliyym8ZL/Wt71kdolp6yaD4fLIQz638E6JEt0=
+github.com/emersion/go-sasl v0.0.0-20161116183048-7e096a0a6197/go.mod h1:G/dpzLu16WtQpBfQ/z3LYiYJn3ZhKSGWn83fyoyQe/k=
+golang.org/x/text v0.3.0 h1:g61tztE5qeGQ89tm6NTjjM9VPIm088od1l6aSorWRWg=
+golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
