@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"log"
 	"os/exec"
 
 	"github.com/emersion/go-imap/client"
@@ -44,7 +43,7 @@ type UpdateEvents struct {
 func (ev *UpdateEvents) Handle(update client.Update) error {
 	switch interface{}(update).(type) {
 	case *client.StatusUpdate:
-		log.Println("Got status update")
+		fmt.Println("got status update")
 		if ev.OnStatus != nil {
 			return ev.OnStatus.Run()
 		}
@@ -54,18 +53,16 @@ func (ev *UpdateEvents) Handle(update client.Update) error {
 		}
 		return ErrNoEventHandler
 	case *client.MailboxUpdate:
-		log.Println("Got mailbox update")
+		fmt.Println("got mailbox update")
 		if ev.OnMailbox != nil {
-			log.Println("RUN", ev.OnMailbox)
 			return ev.OnMailbox.Run()
 		}
 		if ev.Default != nil {
-			log.Println("RUN", ev.Default)
 			return ev.Default.Run()
 		}
 		return ErrNoEventHandler
 	case *client.MessageUpdate:
-		log.Println("Got message update")
+		fmt.Println("got message update")
 		if ev.OnMessage != nil {
 			return ev.OnMessage.Run()
 		}
@@ -74,7 +71,7 @@ func (ev *UpdateEvents) Handle(update client.Update) error {
 		}
 		return ErrNoEventHandler
 	case *client.ExpungeUpdate:
-		log.Println("Got expunge update")
+		fmt.Println("got expunge update")
 		if ev.OnExpunge != nil {
 			return ev.OnExpunge.Run()
 		}

@@ -2,7 +2,6 @@ package imap
 
 import (
 	"fmt"
-	"log"
 	"os"
 
 	"github.com/emersion/go-imap-idle"
@@ -71,7 +70,6 @@ func (conn *MailBoxConn) Idle(mboxID int, globalUpdates chan MailBoxUpdate) erro
 		case err := <-done:
 			conn.client.Updates = nil
 			if err != nil {
-				log.Println("WUT???", err)
 				globalUpdates <- MailBoxUpdate{
 					Update:      nil,
 					MboxID:      mboxID,
