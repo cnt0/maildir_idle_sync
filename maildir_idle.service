@@ -1,0 +1,9 @@
+[Unit]
+Description=IMAP IDLE agent
+
+[Service]
+ExecStart=maildir_idle_sync
+KillSignal=SIGINT
+
+[Install]
+WantedBy=default.target
