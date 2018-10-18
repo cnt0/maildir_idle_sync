@@ -14,7 +14,7 @@ type Command struct {
 	exec.Cmd
 }
 
-// UnmarshalText ...
+// UnmarshalText unmarshals text from toml config into Command struct
 func (c *Command) UnmarshalText(text []byte) error {
 	args := []string{}
 	for _, tok := range bytes.Split(text, []byte{' '}) {
@@ -25,6 +25,13 @@ func (c *Command) UnmarshalText(text []byte) error {
 	}
 	c.Cmd = *exec.Command(args[0], args[1:]...)
 	return nil
+}
+
+// Run is just like exec.Command.Run, but allows multiple runs
+func (c *Command) Run() error {
+	res := c.Cmd.Run()
+	c.Cmd = *exec.Command(c.Cmd.Args[0], c.Cmd.Args[1:]...)
+	return res
 }
 
 // ErrNoEventHandler ...
