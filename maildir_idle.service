@@ -2,7 +2,7 @@
 Description=IMAP IDLE agent
 
 [Service]
-ExecStart=maildir_idle_sync
+ExecStart=maildir_idle_sync -c /path/to/config.toml
 KillSignal=SIGINT
 
 [Install]

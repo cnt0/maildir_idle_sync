@@ -1,0 +1,26 @@
+[UpdateEvents]
+Default   = "./process_update.sh"
+
+[[Account]]
+Name = "gmail"
+Host = "imap.gmail.com:993"
+User = "yourname@gmail.com"
+Pass = "your_password"
+PasswordCommand = "./get_password.sh gmail"
+
+[Account.UpdateEvents]
+Default   = "./process_update.sh gmail default"
+OnStatus  = "./process_update.sh gmail status"
+OnMailbox = "./process_update.sh gmail mailbox"
+OnMessage = "./process_update.sh gmail message"
+OnExpunge = "./process_update.sh gmail expunge"
+
+[[Account.Mailboxes]]
+Name = "Inbox"
+
+[Account.Mailboxes.UpdateEvents]
+Default   = "./process_gmail_inbox.sh default"
+OnStatus  = "./process_gmail_inbox.sh status"
+OnMailbox = "./process_gmail_inbox.sh mailbox"
+OnMessage = "./process_gmail_inbox.sh message"
+OnExpunge = "./process_gmail_inbox.sh expunge"

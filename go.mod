@@ -2,10 +2,10 @@ module github.com/cnt0/maildir_idle_sync
 
 require (
 	github.com/BurntSushi/toml v0.3.1
-	github.com/derekparker/delve v1.1.0
 	github.com/emersion/go-imap v1.0.0-beta.1
 	github.com/emersion/go-imap-idle v0.0.0-20180114101550-2af93776db6b
 	github.com/emersion/go-sasl v0.0.0-20161116183048-7e096a0a6197 // indirect
 	golang.org/x/text v0.3.0 // indirect
+	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/yaml.v2 v2.2.1 // indirect
 )
